@@ -1,0 +1,25 @@
+.project p{
+  font-size:1.5vw;
+  width:65%;
+  top:50%;
+}
+.project h1{
+  font-size: 4vw;
+}
+.project button{
+  border: 2px solid darksalmon;
+  padding:1vw;
+}
+.contact-text h1{
+  font-size:4vw;
+}
+.contact-text p{
+  font-size: 1.4vw;
+}
+.menu-slide {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    .menu-slide.active {
+      transform: translateX(0);
+    }

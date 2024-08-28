@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="icon" href="downloadfile.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="Style2.css">
+<title>WebMart</title>
+<style>
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+h1, h2, h3, p {
+    transition: color 0.5s ease;
+}
+a {
+    transition: color 0.5s ease, border-color 0.5s ease;
+}
+:root{
+  --salmon: #EF9D71;
+  --black:#000;
+  --white:#fff;
+  --cyan:#AEDEE0;
+  --dsalmon:#532521;
+  --dcyan:#1f2f32;
+}
+body[theme="black"]{
+  background-color:var(--black);
+  color:var(--white);
+  border-color: white;
+}
+body[theme="cyan"]{
+  background-color:var(--cyan);
+  color:var(--dcyan);
+}
+body[theme="salmon"]{
+  background-color:var(--salmon);
+  color:var(--dsalmon);
+}
+body[theme="light"]{
+  background-color:var(--white);
+}
+.box button{
+  background-color:cyan;
+}
+.parent{
+  height:3000vh;
+  background-color:black;
+}
+.loader {
+  position: fixed;
+  height:100%;
+  width:100%;
+  background-color: black;
+  z-index:999999;
+  transition: ease-out 0.7s;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader h1{
+  font-size:4vw;
+  color:transparent;
+  background:linear-gradient(to right,orange,orangered);
+ -webkit-background-clip:text ;
+ position:absolute;
+ opacity:0;
+}
+.loader h1:nth-child(1){
+  opacity:0;
+  animation-name:load;
+  animation-delay:0.7s;
+ animation-duration:1s;
+ animation-timing-function:linear;
+}
+.loader h1:nth-child(2){
+  opacity:0;
+  animation-name:load;
+  animation-delay:2.5s;
+ animation-duration:1s;
+ animation-timing-function:linear;
+}
+
+.loader h1:nth-child(3){
+  opacity:0;
+  animation-name:load;
+animation-delay:4.5s;
+ animation-duration:1s;
+ animation-timing-function:linear;
+}
+@keyframes load{
+0%{
+  opacity:0;
+}
+10%{
+  opacity:1;
+}
+90%{
+  opacity:1;
+}
+100%{
+  opacity:0;
+}
+}
+
+    @media screen and (orientation: portrait) {
+  .paragraph{
+    font-size:1.6vh;
+    width:45%;
+  }
+  .nav-part2 h4{
+    font-size:1.4vh;
+  }
+.home .heading{
+  font-size:3.5vh;
+}
+.gola{
+  height:1vh;
+  width:1vh;
+  margin:0vw 2vh;
+}
+.moving-text{ 
+  font-size:2vh;
+}
+.para{
+  font-size:1.6vh;
+  padding-right: 2vh;
+  width:60%;
+}
+.blured-circle{
+  height:20vh;
+  width:20vh;
+  bottom:15%;
+}
+#typed-output{
+  font-size:3vh;
+  padding-left:3vh;
+  width:45vh;
+  top: 75%;
+}
+.About .image{
+  height: 50vh;
+  width: auto;
+}
+.Templates p{
+  font-size:1.5vh;
+}
+.Templates h1{
+  font-size:3vh;
+  padding-left:13.5vw;
+}
+.Templates .blured-circle{
+  top: 27%;
+  right:30%;
+}
+ .portrolio img{
+   height:50%;
+   width:auto;
+   scale:1.25;
+ }
+ .portfolio{
+   height:80vh;
+ }
+.box h1{
+  font-size:1.8vh;
+}
+.box h4{
+  font-size:1.4vh;
+}
+.box button{
+  font-size:1.2vh;
+}
+.box span{
+  font-size:2vh;
+}
+.box img{
+    height:25vh;
+}
+.portrolio p{
+  font-size:2.8vh;
+  scale:1.25;
+}
+.left .adjective{
+  font-size: 3vh;
+}
+.main-effect{
+  height:50vh !important;
+}
+.home{
+  margin-top:0px;
+}
+.banner .back{
+  padding-top:20vh;
+}
+.banner{
+  height:50vh;
+}
+.project{
+  height:100%;
+  overflow: hidden;
+}
+.project p{
+  font-size:1.5vh;
+  top:35%;
+}
+.project h1{
+  font-size: 4vh;
+}
+.project button{
+  padding:1vh;
+  bottom:35%;
+}
+.project img{
+  height:100%;
+  width:100%;
+  transform:translateX(0%);
+  
+}
+.contactInformation{
+  flex-direction: column;
+}
+.contact-text p{
+  font-size:1.3vh;
+}
+}
+  </style>
+</head>
+<body theme="dark-mode" class="">
+ <div class="loader h-screen w-screen bg-black fixed top-0 left-0 z-50">
+  <h1>ENVIRONMENT</h1>
+  <h1>EXPIERIENCES</h1>
+  <h1>CONTENT</h1>
+  </div> 
+  
+  <div data-scroll-container class="main overflow-x-hidden w-screen  relative">
+<div  class="banner  relative h-fit z-0 flex justify-center">
+ <div style="--clip:100%;" class="  videodiv  bg-black z-10 h-screen w-screen absolute top-0 left-0  overflow-hidden h-screen ">
+      <video autoplay loop muted class="bg-cover h-screen w-screen bg-center " src="short.mp4"></video>
+      <div class="paragraph absolute w-1/4 left-20 bottom-10 text-center text-white ">Bringing innovative ideas to life through expert web design and development. Explore my portfolio to see how I transform visions into stunning digital realities.</div>
+    </div>
+    <div class="main-effect flex justify-center items-center h-screen w-screen">
+      <div class="back absolute top-0  left-0 z-0 ">
+<img src="Img3.jpg" alt="">
+<img src="Img4.jpg" alt="">
+<img src="Img2.jpg" alt="">
+<img src="Img2.jpg" alt="">
+
+      </div>
+    </div>
+     </div>
+<div data-theme="salmon" id="home" class="home w-screen h-screen relative overflow-hidden">
+  <img src="Logo.png" class="absolute top-10 right-20 h-20 " alt="">
+<h1 class="w-1/2 absolute top-1/4 px-10 heading ">Transforming Ideas into Digital Reality</h1>
+<div class="para w-1/2 absolute right-0 z-10 bottom-1/4">
+Welcome to WebMart, your one-stop shop for premium projects and website solutions. Whether you're looking for a custom-built website or a ready-to-deploy project, we’ve got you covered. Explore our portfolio and find the perfect solution tailored to your needs.
+</div>
+<div class="blured-circle absolute"></div>
+<div class="moving-text relative z-0">
+<div class="con">
+          <h1>EXPIERIENCE</h1>
+          <div class="gola"></div>
+          <h1>CONTENT</h1>
+          <div class="gola"></div>
+          <h1>ENVIRONMENT</h1>
+          <div class="gola"></div>
+</div>
+<div class="con">
+          <h1>EXPIERIENCE</h1>
+          <div class="gola"></div>
+          <h1>CONTENT</h1>
+          <div class="gola"></div>
+          <h1>ENVIRONMENT</h1>
+          <div class="gola"></div>
+</div>
+<div class="con">
+          <h1>EXPIERIENCE</h1>
+          <div class="gola"></div>
+          <h1>CONTENT</h1>
+          <div class="gola"></div>
+          <h1>ENVIRONMENT</h1>
+          <div class="gola"></div>
+</div>
+        </div>
+    </div>
+<div data-theme="vibrant-tech" id="about" class="About relative  w-screen flex overflow-hidden">
+
+<div id="typed-output" class="top-1/2 absolute text-center"></div>
+<div class="image w-1/2 absolute right-5">
+  <img src="Png.png" class="px-5 w-full" alt="">
+</div>
+    </div>
+      <hr> </hr>
+<div data-theme="cyan" id="templates" class="Templates w-screen relative overflow-hidden ">
+    <h1 class="absolute top-20 px-10 ">Website Design Examples</h1>
+      <P>
+Browse our selection of premium templates designed for versatility and style. Each template is fully customizable, allowing you to create a unique and polished website that perfectly suits your brand. Get started quickly and bring your ideas to life with ease.
+      </P>
+      <div class="blured-circle absolute"></div>
+      <div class="boxes  overflow-hidden flex flex-wrap justify-evenly gap-1.5 items-center pt-20 ">
+      <div class="box box1">
+          <img src="Buissness.jpg" class=" " alt="">
+          <h1>Modern Buissness Websites</h1>
+          <h4>Perfect for startups and businesses</h4>
+          <span>Price:&nbsp 25$</span>
+          <button>Call Now</button>
+          <hr class="mt-10"> </hr>
+        </div>
+      <div class="box box2">        
+      <img src="Night.jpg" class=" " alt="">
+          <h1>Realastic Websites</h1>
+          <h4>Crafted for digital experiences</h4>
+          <span>Price:&nbsp 30$</span>
+          <button>Call Now</button>
+          <hr class="mt-10"> </hr></div>
+      <div class="box box3">
+        <img src="Dark.jpg" class=" " alt="">
+          <h1>Landing Pages</h1>
+          <h4>Crafted for digital experiences</h4>
+          <span>Price:&nbsp 30$</span>
+          <button>Call Now</button>
+          <hr class="mt-10"> </hr>
+      </div>
+      <div class="box box4">          <img src="Img3.jpg" class=" " alt="">
+          <h1>E-Commerce and Marketing</h1>
+          <h4>Brilliant E-Commerce Websites</h4>
+          <span>Price:&nbsp 25$</span>
+          <button>Call Now</button>
+          <hr class="mt-10"> </hr></div>
+
+
+          <button class="absolute mr-auto ml-auto rounded-md bg-blue-300 border-2 border-black px-2 py-2 bottom-0  ">View More</button>
+    </div>
+
+   
+  </div>
+  <div theme="light" id="portfolio" class=" text-black portfolio mt-10 w-screen relative h-screen overflow-hidden w-screen flex  ">
+  <div class="left w-1/2 relative left-0 overflow-hidden">
+    <div class="adjective text-center pl-10 absolute top-1/3"></div>
+      <p class=" ml-10  absolute bottom-1/4 overflow-hidden  text-center">
+Explore my portfolio, where I bring creative ideas to life with skillful design and development. Each project highlights my ability to craft unique, high-quality websites tailored to client needs. Let my work inspire your next digital venture.
+    </p>
+    </div>
+  <div class="image translate-x-10 w-1/2 relative right-0  overflow-hidden">
+    <img src="img.png" class="height-screen" alt="">
+  </div>
+
+</div>
+<div id="project" data-theme="salmon" class="project relative  w-screen  ">
+ <div class="project-text relative h-screen ">  <h1 class="py-10 px-20 text-center ">Elevate Your Brand with Stunning  Designs</h1>
+  <p class="text-center absolute  right-10  text-black">
+    At our design agency, we transform your ideas into visually captivating experiences that resonate with your audience. Our team of creative experts specializes in delivering tailor-made designs that elevate your brand and drive impactful results. Whether you're looking to refresh your existing identity or create a new one, we bring innovation, strategy, and artistry together to ensure your brand stands out in today's competitive market. Explore our portfolio and see how we can help you bring your vision to life.
+  </p></div>
+  <img class="h-3/4 w-1/2 -translate-x-12" src="male0033.png" alt="">
+  <button class="absolute  bottom-20 right-20">View Projects</button>
+  </div>
+  <div class=" contactpage  bg-gray-100 py-10 min-h-screen">
+<div class="contactInformation flex justify-center items-center">
+    <div class="contact-text">
+    <h1 class="px-10 py-10">Get In Touch</h1>
+    <P class="text-center w-2/3 px-12">We would love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out. Our team is here to assist you and will get back to you as soon as possible.</P>
+  </div>
+    <div class="contactformpage bg-white bg-opacity-80 p-8 m-12 rounded-lg shadow-lg max-w-md w-full ">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Contact Us</h2>
+        <form action="YOUR_FORM_PROCESSING_URL" method="POST">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-4">
+                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                <input type="text" id="subject" name="subject" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                <textarea id="message" name="message" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Send Message</button>
+            </div>
+        </form>
+    </div>
+</div>
+    
+    <div class="bg-white p-6 rounded-lg shadow-md w-2/3 mx-auto  h-auto max-w-full flex justify-center items-center ">
+  <div class="">
+      <h2 class="text-3xl px-auto font-semibold text-gray-800 mb-4">Contact Information</h2>
+    <p class="text-gray-700 mb-2 px-auto">
+        <span class="font-bold">GitHub:</span> 
+        <a href="https://github.com/Kunal543-developer" class="text-blue-500 hover:underline">Kunal543-developer</a>
+    </p>
+    <p class=" px-auto text-gray-700 mb-2">
+        <span class="font-bold">Email:</span> 
+        <a href="mailto:kunal06022009@gmail.com" class="text-blue-500 hover:underline">kunal06022009@gmail.com</a>
+    </p>
+    <p class="text-gray-700 px-auto">
+        <span class="font-bold">YouTube:</span> 
+        <span class="text-gray-500">Channel not created yet</span>
+    </p>
+  </div>
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+<script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> 
+  <script src="script.js"></script>
+</body>
+</html>
